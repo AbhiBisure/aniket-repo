@@ -12,6 +12,13 @@ app.post("/users", (req, res) => {
   });
 });
 
+app.delete("/users", (req, res) => {
+  users.push(req.body);
+  res.status(201).json({
+    message: "User Added",
+  });
+});
+
 app.post("/addUsers",(req,res)=>{
     res.send("user added")
     users.push(req.body)
