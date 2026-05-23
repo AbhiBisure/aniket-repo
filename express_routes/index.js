@@ -12,6 +12,14 @@ app.post("/users", (req, res) => {
   });
 });
 
+app.patch("/users", (req, res) => {
+  users.push(req.body);
+  res.status(201).json({
+    message: "User Added",
+  });
+});
+
+
 app.get("/users", (req, res) => {
   res.json(users);
 });
