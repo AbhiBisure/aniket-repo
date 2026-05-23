@@ -12,14 +12,6 @@ app.post("/users", (req, res) => {
   });
 });
 
-app.post("/addUsers",(req,res)=>{
-    res.send("user added")
-    users.push(req.body)
-    res.status(200).json({
-        message:"new user added"
-    })
-})
-
 app.get("/users", (req, res) => {
   res.json(users);
 });
